@@ -1,0 +1,12 @@
+@import './helpers/variables';
+@import './helpers/mixins';
+@import './globals/globals';
+@import './components/navbar';
+@import './components/buttons';
+
+@import '../Components/Header/header';
+@import '../Components/Footer/footer';
+@import '../Components/CategoriesBtns/categoriesBtns';
+@import '../Components/Jokes/jokes';
+@import '../Pages/Joke/joke';
+@import '../Pages/Notfound/notfound';

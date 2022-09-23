@@ -1,0 +1,91 @@
+@import '../../Scss/helpers/variables';
+
+.jokes-container{
+    .all-jokes{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .joke-text{
+            position: relative;
+            border: 1px solid $whiteThree;
+            background-color: $whiteColor;
+            width: 360px;
+            height: 246px;
+            margin: 25px;
+            padding: 42px 32PX 61px;
+            border-radius: 2px;
+            cursor: pointer;
+            &:hover{
+                box-shadow: 0 1px 7px 0 rgb(0, 0, 0, 0.15);
+            }
+            .joke-categ{
+                display: flex;
+                align-items: center;
+                width: 206px;
+                height: 20px;
+                margin: 0 0 6px 0px;
+                font-family: $MontserratFont;
+                font-size: $sizeNormal;
+                font-weight: $fontSemiBold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.25;
+                letter-spacing: normal;
+                color: $textColor;
+                img{
+                    margin-right: 8px;
+                }
+            }
+            .see-stats{
+                position: absolute;
+                right: 12px;
+                bottom: 12px;
+                display: flex;
+                align-items: center;
+                text-transform: uppercase;
+                color: $buttonColor;
+                img{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .view-more-jokes{
+        width: 206px;
+        font-family: $MontserratFont;
+        font-size: 14px;
+        font-weight: $fontSemiBold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.43;
+        letter-spacing: normal;
+        text-align: center;
+        padding: 14px 20px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        color: $buttonColor;
+        border: 1px solid $buttonColor;
+        cursor: pointer;
+        background-color: transparent;
+        margin: 50px auto;
+        display: block;
+        img{
+            margin-left: 10px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 767px)  {
+    .all-jokes{
+        flex-direction: column;
+        padding: 10px;
+        width: 100% !important;
+        .joke-text{
+            width: 100% !important;
+            margin: 20px 0 !important;
+            height: auto !important;
+        }
+    }
+}

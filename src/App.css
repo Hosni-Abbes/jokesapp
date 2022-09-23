@@ -1,0 +1,365 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+.container {
+  padding: 0 7%;
+}
+
+.app-header .header-nav {
+  position: relative;
+  background-color: #5e5e5e;
+  width: 100%;
+}
+.app-header .header-nav .menu-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 14px;
+  right: 30px;
+}
+.app-header .header-nav .menu-btn span {
+  width: 30px;
+  background-color: #303030;
+  padding: 2px;
+  margin: 5px 0px;
+  display: block;
+}
+.app-header .header-nav .nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.app-header .header-nav .nav-items a {
+  font-size: 15px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  width: 158px;
+  height: 19px;
+  margin: 20px 64px 21px 41px;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.app-header .header-bitmap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.app-header .header-bitmap .the-joke-bible {
+  width: 350px;
+  height: 72px;
+  margin: 60px 174px 0;
+  font-family: "Arial";
+  font-size: 48px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #cfb995;
+}
+.app-header .header-bitmap p {
+  color: #ffffff;
+  font-weight: 600;
+  margin: 20px 120px;
+}
+.app-header .header-bitmap form {
+  position: relative;
+}
+.app-header .header-bitmap form input[type=text] {
+  background-color: transparent;
+  border: 1px solid #ecebe9;
+  padding: 10px;
+  border-radius: 4px;
+  width: 400px;
+  margin: 32px 0 60px;
+  color: #ffffff;
+}
+.app-header .header-bitmap form button {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  background-color: transparent;
+  border: navajowhite;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .app-header .header-nav {
+    height: 70px;
+  }
+  .app-header .header-nav .menu-btn {
+    display: block;
+  }
+  .app-header .header-nav .nav-items {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 30px 0;
+  }
+  .app-header .header-bitmap p {
+    margin: 20px;
+  }
+  .app-header .header-bitmap form {
+    width: 80%;
+  }
+  .app-header .header-bitmap form input[type=text] {
+    width: 100% !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .app-header .header-nav .menu-btn {
+    display: none;
+  }
+  .app-header .header-nav .nav-items {
+    display: block !important;
+  }
+}
+.app-footer {
+  width: 100%;
+  height: 195px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.app-footer .footer-text {
+  width: 250px;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.app-footer .footer-btn-submit-joke {
+  background-color: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #d0ba93;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.app-footer .footer-btn-submit-joke img {
+  margin-left: 10px;
+}
+
+.joke-categories {
+  padding: 80px 0;
+}
+.joke-categories .joke-category-btn {
+  width: 206px;
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  padding: 14px 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: #ecebe9;
+  cursor: pointer;
+}
+.joke-categories .red {
+  background-color: #ff5b5b;
+}
+.joke-categories .pastel-orange {
+  background-color: #ff915b;
+}
+.joke-categories .pale-orange {
+  background-color: #ffbe5b;
+}
+.joke-categories .light-gold {
+  background-color: #ffdf5b;
+}
+.joke-categories .kiwi-green {
+  background-color: #8fe360;
+}
+.joke-categories .weird-green {
+  background-color: #57e690;
+}
+.joke-categories .blue {
+  background-color: #57dbe6;
+}
+.joke-categories .transparent {
+  background-color: transparent;
+  color: #d0ba93;
+  border: 1px solid #d0ba93;
+}
+.joke-categories .transparent img {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .joke-categories .joke-category-btn {
+    width: 100%;
+  }
+}
+.jokes-container .all-jokes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.jokes-container .all-jokes .joke-text {
+  position: relative;
+  border: 1px solid #ecebe9;
+  background-color: #ffffff;
+  width: 360px;
+  height: 246px;
+  margin: 25px;
+  padding: 42px 32PX 61px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.jokes-container .all-jokes .joke-text:hover {
+  -webkit-box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
+}
+.jokes-container .all-jokes .joke-text .joke-categ {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 206px;
+  height: 20px;
+  margin: 0 0 6px 0px;
+  font-family: "Arial";
+  font-size: 1rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #303030;
+}
+.jokes-container .all-jokes .joke-text .joke-categ img {
+  margin-right: 8px;
+}
+.jokes-container .all-jokes .joke-text .see-stats {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  color: #d0ba93;
+}
+.jokes-container .all-jokes .joke-text .see-stats img {
+  margin-left: 10px;
+}
+.jokes-container .view-more-jokes {
+  width: 206px;
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: center;
+  padding: 14px 20px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  color: #d0ba93;
+  border: 1px solid #d0ba93;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 50px auto;
+  display: block;
+}
+.jokes-container .view-more-jokes img {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .all-jokes {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+    width: 100% !important;
+  }
+  .all-jokes .joke-text {
+    width: 100% !important;
+    margin: 20px 0 !important;
+    height: auto !important;
+  }
+}
+.not-found {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Arial";
+  font-weight: 600;
+  margin: 200px auto;
+  color: #ff5b5b;
+}
+.not-found p:first-of-type {
+  margin-bottom: 20px;
+}

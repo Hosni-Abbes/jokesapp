@@ -1,0 +1,15 @@
+@import '../../Scss/helpers/variables';
+
+.not-found{
+    text-align: center;
+    font-size: $sizeLarge;
+    font-family: $MontserratFont;
+    font-weight: $fontSemiBold;
+    margin: 200px auto;
+    color: $redColor;
+    p{
+        &:first-of-type{
+            margin-bottom: 20px;
+        }
+    }
+}

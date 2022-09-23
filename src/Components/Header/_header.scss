@@ -1,0 +1,134 @@
+@import '../../Scss/helpers/variables';
+
+.app-header{
+    .header-nav{
+        position: relative;
+        background-color: $headerColor;
+        width: 100%;
+        .menu-btn{
+            display: none;
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 14px;
+            right: 30px;
+            span{
+                width: 30px;
+                background-color: $textColor;
+                padding: 2px;
+                margin: 5px 0px;
+                display: block;
+            }
+        }
+        .nav-items{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            a {
+                font-size: 15px;
+                font-weight: $fontSemiBold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                width: 158px;
+                height: 19px;
+                margin: 20px 64px 21px 41px;
+                text-decoration: none;
+                color: $whiteColor;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .header-bitmap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .the-joke-bible{
+            width: 350px;
+            height: 72px;
+            margin: 60px 174px 0;
+            font-family: $MontserratFont;
+            font-size: 48px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: center;
+            color: $headingsColor;
+        }
+        p{
+            color: $whiteColor;
+            font-weight: $fontSemiBold;
+            margin: 20px 120px;
+        }
+        form{
+            position: relative;
+            input[type="text"]{
+                background-color: transparent;
+                border: 1px solid $whiteThree;
+                padding: 10px;
+                border-radius: 4px;
+                width: 400px;
+                margin: 32px 0 60px;
+                color: $whiteColor;
+            }
+            button{
+                position: absolute;
+                right: 10px;
+                top: 40px;
+                background-color: transparent;
+                border: navajowhite;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px)  {
+    .app-header{
+        .header-nav{
+            height: 70px;
+            .menu-btn{
+                display: block;
+            }
+            .nav-items{
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 30px 0;
+            }
+        }
+        .header-bitmap{
+            p{
+                margin: 20px;
+            }
+            form{
+                width: 80%;
+                input[type="text"]{
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px)  {
+    .app-header{
+        .header-nav{
+            .menu-btn{
+                display: none;
+            }
+            .nav-items{
+                display: block !important;
+            }
+        }
+    }
+}
