@@ -14,3 +14,34 @@ body {
 .container {
     padding: 0 7%;
 }
+
+.socialJokes{background-color: $kiwiGreen; color: $whiteColor;}
+.adultJokes{background-color: $redColor; color: $whiteColor;}
+.dadJokes{background-color: $pastelOrange; color: $whiteColor;}
+.cristmasJokes{background-color: $paleOrange; color: $whiteColor;}
+.jobJokes{background-color: $lightGold; color: $headerColor;}
+.birthdayJokes{background-color: $weirdGreen; color: $whiteColor;}
+.puns{background-color: $blueSky; color: $whiteColor;}
+.otherJokes{background-color: $grayColor; color: $whiteColor;}
+
+
+// Custom Classes
+.linkToJoke{
+    display: block;
+    color: $headerColor;
+    text-decoration: none;
+    font-weight: $fontSemiBold;
+    margin-bottom:8px;
+    transition: all .3s ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+    &:hover{
+        color: $textColor;
+    }
+}
+
+.d-none {
+    display: none;
+}

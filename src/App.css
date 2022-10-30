@@ -13,10 +13,87 @@ body {
   padding: 0 7%;
 }
 
+.socialJokes {
+  background-color: #8fe360;
+  color: #ffffff;
+}
+
+.adultJokes {
+  background-color: #ff5b5b;
+  color: #ffffff;
+}
+
+.dadJokes {
+  background-color: #ff915b;
+  color: #ffffff;
+}
+
+.cristmasJokes {
+  background-color: #ffbe5b;
+  color: #ffffff;
+}
+
+.jobJokes {
+  background-color: #ffdf5b;
+  color: #5e5e5e;
+}
+
+.birthdayJokes {
+  background-color: #57e690;
+  color: #ffffff;
+}
+
+.puns {
+  background-color: #57dbe6;
+  color: #ffffff;
+}
+
+.otherJokes {
+  background-color: #b2b2b2;
+  color: #ffffff;
+}
+
+.linkToJoke {
+  display: block;
+  color: #5e5e5e;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 8px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
+}
+.linkToJoke:hover {
+  color: #303030;
+}
+
+.d-none {
+  display: none;
+}
+
 .app-header .header-nav {
-  position: relative;
-  background-color: #5e5e5e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
   width: 100%;
+  height: 70px;
+  background-color: #5e5e5e;
+}
+.app-header .header-nav .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.app-header .header-nav .container .arrowBack {
+  display: block;
 }
 .app-header .header-nav .menu-btn {
   display: none;
@@ -62,6 +139,9 @@ body {
   text-transform: uppercase;
 }
 .app-header .header-bitmap {
+  position: relative;
+  top: 70px;
+  margin-bottom: calc(70px + 1rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,26 +175,6 @@ body {
   font-weight: 600;
   margin: 20px 120px;
 }
-.app-header .header-bitmap form {
-  position: relative;
-}
-.app-header .header-bitmap form input[type=text] {
-  background-color: transparent;
-  border: 1px solid #ecebe9;
-  padding: 10px;
-  border-radius: 4px;
-  width: 400px;
-  margin: 32px 0 60px;
-  color: #ffffff;
-}
-.app-header .header-bitmap form button {
-  position: absolute;
-  right: 10px;
-  top: 40px;
-  background-color: transparent;
-  border: navajowhite;
-  cursor: pointer;
-}
 
 @media screen and (max-width: 767px) {
   .app-header .header-nav {
@@ -122,6 +182,7 @@ body {
   }
   .app-header .header-nav .menu-btn {
     display: block;
+    z-index: 100;
   }
   .app-header .header-nav .nav-items {
     display: none;
@@ -133,6 +194,12 @@ body {
         -ms-flex-align: start;
             align-items: flex-start;
     padding: 30px 0;
+    background-color: #5e5e5e;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 99;
   }
   .app-header .header-bitmap p {
     margin: 20px;
@@ -145,6 +212,9 @@ body {
   }
 }
 @media screen and (min-width: 768px) {
+  .app-header .header-nav .container .arrowBack {
+    display: none;
+  }
   .app-header .header-nav .menu-btn {
     display: none;
   }
@@ -152,6 +222,43 @@ body {
     display: block !important;
   }
 }
+.search-form {
+  position: relative;
+}
+.search-form select {
+  background-color: #f9f9f9;
+  border: 1px solid #ecebe9;
+  padding: 10px;
+  border-radius: 4px;
+  width: 400px;
+  margin: 32px 0 60px;
+  color: #5e5e5e;
+  outline: none;
+  font-weight: 900;
+  outline: none;
+}
+.search-form button {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  background-color: transparent;
+  border: navajowhite;
+  cursor: pointer;
+}
+.search-form .jokesInSearch {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #ecebe9;
+  padding: 10px;
+  text-align: center;
+}
+.search-form .linkToJoke {
+  max-width: 100% !important;
+}
+
 .app-footer {
   width: 100%;
   height: 195px;
@@ -350,6 +457,159 @@ body {
     width: 100% !important;
     margin: 20px 0 !important;
     height: auto !important;
+  }
+}
+.jokeBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.jokeBody .jokeSection {
+  width: 67%;
+  margin: 1rem;
+}
+.jokeBody .jokeSection .jokeValue {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ecebe9;
+  border-radius: 4px;
+}
+.jokeBody .jokeSection .jokeValue .jokeCategory {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 15px;
+}
+.jokeBody .jokeSection .jokeValue .jokeTxt {
+  margin: 20px 0;
+  line-height: 2;
+}
+.jokeBody .jokeSection .jokeValue .likes, .jokeBody .jokeSection .jokeValue .dislikes {
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+}
+.jokeBody .jokeSection .jokeValue .likes span, .jokeBody .jokeSection .jokeValue .dislikes span {
+  display: inline-block;
+}
+.jokeBody .jokeSection .jokeValue .likes span {
+  color: #1d8b48;
+  font-size: 900;
+}
+.jokeBody .jokeSection .jokeValue .dislikes span {
+  color: #f13636;
+  font-size: 900;
+}
+.jokeBody .jokeSection .jokeValue button {
+  border: none;
+  border-radius: 100%;
+  padding: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+.jokeBody .jokeSection .jokeValue button img {
+  width: 30px;
+  height: 30px;
+}
+.jokeBody .jokeSection .jokeValue .likeBtn {
+  background-color: #1d8b48;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.jokeBody .jokeSection .jokeValue .likeBtn:hover {
+  background-color: #57e690;
+}
+.jokeBody .jokeSection .jokeValue .dislikeBtn {
+  background-color: #f13636;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.jokeBody .jokeSection .jokeValue .dislikeBtn:hover {
+  background-color: #ff5b5b;
+}
+.jokeBody .seeMoreJokes {
+  background-color: #ffffff;
+  border: 1px solid #ecebe9;
+  padding: 20px;
+  margin: 1rem;
+  border-radius: 4px;
+  width: 33%;
+}
+.jokeBody .seeMoreJokes h3 {
+  font-size: 1rem;
+  color: #cfb995;
+  margin-bottom: 1rem;
+}
+.jokeBody .jokeSkelet .skeletCat, .jokeBody .jokeSkelet .skeletTitle, .jokeBody .topJokeSkelet .skeletCat, .jokeBody .topJokeSkelet .skeletTitle {
+  width: 100px;
+  height: 28px;
+  background-color: #b2b2b2;
+  border-radius: 8px;
+  -webkit-animation: animate linear 1s infinite alternate;
+          animation: animate linear 1s infinite alternate;
+}
+.jokeBody .jokeSkelet .skeletTxt span, .jokeBody .jokeSkelet .skeletJokes5 span, .jokeBody .topJokeSkelet .skeletTxt span, .jokeBody .topJokeSkelet .skeletJokes5 span {
+  display: block;
+  width: 100%;
+  height: 18px;
+  background-color: #b2b2b2;
+  border-radius: 4px;
+  margin: 12px 0;
+  -webkit-animation: animate linear 1s infinite alternate;
+          animation: animate linear 1s infinite alternate;
+}
+.jokeBody .jokeSkelet .skeletLikDislik, .jokeBody .topJokeSkelet .skeletLikDislik {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100px;
+}
+.jokeBody .jokeSkelet .skeletLikDislik div, .jokeBody .topJokeSkelet .skeletLikDislik div {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  background-color: #b2b2b2;
+  -webkit-animation: animate linear 1s infinite alternate;
+          animation: animate linear 1s infinite alternate;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .jokeBody {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .jokeBody .jokeSection {
+    width: calc(100% - 2rem);
+  }
+  .jokeBody .jokeSection .jokeValue .jokeCategory {
+    font-size: 1rem;
+  }
+  .jokeBody .seeMoreJokes {
+    width: calc(100% - 2rem);
   }
 }
 .not-found {

@@ -2,9 +2,21 @@
 
 .app-header{
     .header-nav{
-        position: relative;
-        background-color: $headerColor;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
         width: 100%;
+        height: 70px;
+        background-color: $headerColor;
+        .container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .arrowBack {
+                display: block;
+            }
+        }
         .menu-btn{
             display: none;
             width: 40px;
@@ -44,6 +56,9 @@
         }
     }
     .header-bitmap{
+        position: relative;
+        top: 70px;
+        margin-bottom: calc(70px + 1rem);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -69,26 +84,6 @@
             font-weight: $fontSemiBold;
             margin: 20px 120px;
         }
-        form{
-            position: relative;
-            input[type="text"]{
-                background-color: transparent;
-                border: 1px solid $whiteThree;
-                padding: 10px;
-                border-radius: 4px;
-                width: 400px;
-                margin: 32px 0 60px;
-                color: $whiteColor;
-            }
-            button{
-                position: absolute;
-                right: 10px;
-                top: 40px;
-                background-color: transparent;
-                border: navajowhite;
-                cursor: pointer;
-            }
-        }
     }
 }
 
@@ -99,12 +94,19 @@
             height: 70px;
             .menu-btn{
                 display: block;
+                z-index: 100;
             }
             .nav-items{
                 display: none;
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 30px 0;
+                background-color: $headerColor;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                z-index: 99;
             }
         }
         .header-bitmap{
@@ -123,6 +125,11 @@
 @media screen and (min-width: 768px)  {
     .app-header{
         .header-nav{
+            .container {
+                .arrowBack {
+                    display: none;
+                }
+            }
             .menu-btn{
                 display: none;
             }
